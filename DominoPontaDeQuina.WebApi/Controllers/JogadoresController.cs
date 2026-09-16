@@ -1,11 +1,14 @@
 ﻿using DominoPontaDeQuina.Core.Services;
 using DominoPontaDeQuina.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace DominoPontaDeQuina.WebApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class JogadoresController : ControllerBase
 {
     private readonly JogadorService _service;

@@ -27,6 +27,11 @@ public class UsuarioService
         return await _usuarioRepository.BuscarPorNomeAsync(nome);
     }
 
+    public async Task<Usuario?> BuscarPorEmailAsync(string email)
+    {
+        return await _usuarioRepository.BuscarPorEmailAsync(email);
+    }
+
     public async Task CriarAsync(Usuario usuario)
     {
         await _usuarioRepository.AdicionarAsync(usuario);

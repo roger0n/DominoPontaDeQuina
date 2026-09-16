@@ -10,6 +10,8 @@ public interface IUsuarioRepository
 
     Task<List<Usuario>> BuscarPorNomeAsync(string nome);
 
+    Task<Usuario?> BuscarPorEmailAsync(string email);
+
     Task AdicionarAsync(Usuario usuario);
 
     Task AtualizarAsync(Usuario usuario);
